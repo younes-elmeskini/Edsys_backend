@@ -30,11 +30,11 @@ const limiter = rateLimit({
 
 app.use(limiter);
 
-// const userRoutes = require("./routes/userRoutes");
+const userRoutes = require("./routes/UserRoute");
 
 
 app.use(express.json());
-// app.use("/user", userRoutes);
+app.use("/user", userRoutes);
 
 
 app.listen(port, () => {
